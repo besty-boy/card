@@ -18,6 +18,8 @@
     /*font*/
     --font-family: "Space Grotesk", sans-serif;
 }
+
+
 body {
   margin: 0;
   padding: 0;
@@ -32,7 +34,7 @@ main {
   align-items: center;
   justify-content: center;
   gap: 2.5rem;
-  background-image: url(https://github.com/agusscript/interactive-card-details-form/blob/main/images/bg-main-desktop.png?raw=true);
+  background-image: url(/assets/images/bg-main-desktop.png);
   background-repeat: no-repeat;
 }
 
@@ -60,7 +62,7 @@ form span {
 }
 
 .front {
-  background-image: url(https://github.com/agusscript/interactive-card-details-form/blob/main/images/bg-card-front.png?raw=true);
+  background-image: url(/assets/images/bg-card-front.png);
   background-repeat: no-repeat;
   background-size: 400px;
   background-position: center;
@@ -101,7 +103,7 @@ form span {
 }
 
 .back {
-  background-image: url(https://github.com/agusscript/interactive-card-details-form/blob/main/images/bg-card-back.png?raw=true);
+  background-image: url(/assets/images/bg-card-back.png);
   background-repeat: no-repeat;
   background-size: 400px;
   background-position: center;
@@ -131,7 +133,6 @@ form label {
 form input {
   width: 90%;
   height: 40px;
-  border: 1px solid var(--input-border-color);
   border-radius: 0.4rem;
   font-family: var(--font-family);
   font-size: 1rem;
@@ -139,6 +140,7 @@ form input {
   padding: 0 1rem;
   cursor: pointer;
   outline: none;
+  
 }
 
 form input:focus {
@@ -180,15 +182,10 @@ form input:focus {
   color: var(--white-color);
   font-size: 0.95rem;
   font-family: var(--font-family);
-  font-weight: 500px;
   letter-spacing: 0.01rem;
-  transition: all 0.6s;
 }
 
-#btn-confirm:hover {
-  cursor: pointer;
-  background-color: rgb(83, 52, 223);
-}
+
 
 .submitted-status {
   width: 370px;
@@ -196,14 +193,7 @@ form input:focus {
   animation: fade 1s;
 }
 
-@keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+
 
 .submitted-status h2 {
   color: var(--very-dark-violet-color);
