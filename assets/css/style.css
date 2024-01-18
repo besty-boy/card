@@ -38,7 +38,7 @@ main {
   background-repeat: no-repeat;
 }
 
-.occult {
+.close {
   display: none;
 }
 
@@ -91,13 +91,13 @@ form span {
   letter-spacing: 0.1rem;
 }
 
-.front-card-date {
+.front-card-dates {
   margin-top: 2.5rem;
   margin-left: 18.5rem;
   font-size: 0.9rem;
 }
 
-.front-card-date span {
+.front-card-dates span {
   margin: -1.7px;
   letter-spacing: 1px;
 }
@@ -203,7 +203,7 @@ form input:focus {
 }
 
 .submitted-status p {
-  color: var(--dark-grayish-violet-color);
+  color: var(--dark-violet-color);
   letter-spacing: 0.05rem;
 }
 
@@ -237,7 +237,7 @@ form input:focus {
     margin-right: 1.5rem;
   }
 
-  .cards-container {
+  .card-container {
     margin: 0 1rem;
   }
 
@@ -280,7 +280,7 @@ form input:focus {
     margin-top: 120px;
   }
 
-  .cards-container {
+  .card-container {
     margin-top: -300px;
     top: 0;
   }
@@ -317,7 +317,7 @@ form input:focus {
     margin-top: 160px;
   }
 
-  .cards-container {
+  .card-container {
     margin-top: -244px;
   }
   
@@ -336,7 +336,7 @@ form input:focus {
   
   .num-card {
     height: 0.9rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
     letter-spacing: 0.1rem;
     padding-top: 0.7rem;
   }
@@ -347,7 +347,7 @@ form input:focus {
     letter-spacing: 0.1rem;
   }
   
-  .front-card-date {
+  .front-card-dates {
     width: 4rem;
     margin-top: 1rem;
     margin-left: 12rem;

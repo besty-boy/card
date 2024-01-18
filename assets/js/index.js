@@ -1,19 +1,19 @@
 const $form = document.querySelector("#card-form");
 const $buttonContinue = document.querySelector("#btn-continue");
 const $cardNameInput = document.querySelector("#name");
-const $cardNumberInput = document.querySelector("#card-number");
+const $cardNumberInput = document.querySelector("#card-numbers");
 const $cardMonthInput = document.querySelector("#MM");
 const $cardYearInput = document.querySelector("#YY");
 const $cardCvcInput = document.querySelector("#CVC");
 const userName = $form.name.value;
-const cardNumber = $form["card-number"].value;
+const cardNumber = $form["card-numbers"].value;
 const YY = $form.YY.value;
 const MM = $form.MM.value;
 const CVC = $form.CVC.value;
 
 function validateName(userName) {
   if (userName.length === 0) {
-    return "This field cannot be blank";
+    return "Can't be blanlk";
   } else if (userName.length > 50) {
     return "This field cannot contain more than 50 characters";
   } else if (!/^[ a-z]+$/i.test(userName)) {
@@ -27,7 +27,7 @@ function validateCardNumber(cardNumber) {
   if (cardNumber.length === 0) {
     return "This field cannot be blank";
   } else if (!/([0-9]{4}\s?){4}/.test(cardNumber)) {
-    return "Invalid credit card number";
+    return "Wrong format, numbers only";
   } else {
     return "";
   }
@@ -35,7 +35,7 @@ function validateCardNumber(cardNumber) {
 
 function validateYear(YY) {
   if (YY.length === 0) {
-    return "This field cannot be blank";
+    return "Can't be blanlk";
   } else if (!/^[0-9][0-9]$/.test(YY)) {
     return "Invalid year format";
   } else {
@@ -45,7 +45,7 @@ function validateYear(YY) {
 
 function validateMonth(MM) {
   if (MM.length === 0) {
-    return "This field cannot be blank";
+    return "Can't be blanlk";
   } else if (!/^0[0-9]|1[0-2]$/.test(MM)) {
     return "Invalid month format";
   } else {
@@ -55,7 +55,7 @@ function validateMonth(MM) {
 
 function validateCVC(CVC) {
   if (CVC.length === 0) {
-    return "This field cannot be blank";
+    return "Can't be blanlk";
   } else if (!/^[0-9][0-9][0-9]$/.test(CVC)) {
     return "Invalid CVC format";
   } else {
@@ -66,7 +66,7 @@ function validateCVC(CVC) {
 function validateForm(event) {
   const $submittedStatus = document.querySelector(".submitted-status");
   const userName = $form.name.value;
-  const cardNumber = $form["card-number"].value;
+  const cardNumber = $form["card-numbers"].value;
   const YY = $form.YY.value;
   const MM = $form.MM.value;
   const CVC = $form.CVC.value;
@@ -79,7 +79,7 @@ function validateForm(event) {
 
   const errors = {
     name: errorName,
-    "card-number": errorCardNumber,
+    "card-numbers": errorCardNumber,
     YY: errorYear,
     MM: errorMonth,
     CVC: errorCVC,
@@ -88,8 +88,8 @@ function validateForm(event) {
   const noErrors = manageErrors(errors) === 0;
 
   if (noErrors) {
-    $form.classList.add("occult");
-    $submittedStatus.classList.remove("occult");
+    $form.classList.add("close");
+    $submittedStatus.classList.remove("close");
   }
 
   event.preventDefault();
@@ -112,7 +112,7 @@ function manageErrors(errors) {
       numberOfErrors++;
       $form[key].className = "error";
       $nameErrorText.textContent = errors.name;
-      $cardNumberErrorText.textContent = errors["card-number"];
+      $cardNumberErrorText.textContent = errors["card-numbers"];
       $MMerrorText.textContent = errors.MM;
       $YYerrorText.textContent = errors.YY;
       $cvcErrorText.textContent = errors.CVC;
