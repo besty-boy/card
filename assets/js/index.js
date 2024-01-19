@@ -184,3 +184,19 @@ $form.onsubmit = validateForm;
 $buttonContinue.onclick = function() {
   location.reload();
 }
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  var inputs = document.querySelectorAll("#card-form input");
+
+  inputs.forEach(function (input, index) {
+    input.addEventListener("input", function () {
+      if (input.value.length === input.maxLength) {
+        if (index < inputs.length - 1) {
+          inputs[index + 1].focus();
+        }
+      }
+    });
+  });
+});
